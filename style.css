@@ -205,6 +205,8 @@ html {
     font-size: inherit;
     line-height: inherit;
   }
+  #link-blue{
+    color: #34495e;  }
   a {
     color: #FFFFFF;
     font-size: 21px;
