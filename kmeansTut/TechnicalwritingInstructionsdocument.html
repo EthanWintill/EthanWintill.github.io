@@ -2,7 +2,184 @@
 
 <head>
     <meta content="text/html; charset=UTF-8" http-equiv="content-type">
-    <style type="text/css">
+    <style type="text/css"> 
+        html {
+            font-family: sans-serif;
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+        body {
+            margin: 0;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.42857;
+            color: #333;
+            background-color: #f2f3f8;
+        }
+        a:active,
+        a:hover {
+            outline: 0;
+        }
+        .nav {
+            margin-bottom: 0;
+            padding-left: 0;
+            list-style: none;
+            background-color: rgba(52, 73, 94, 0.8)
+        }
+        .nav:before,
+        .nav:after {
+            content: " ";
+            display: table;
+        }
+        .nav:after {
+            clear: both;
+        }
+        .nav > li {
+            position: relative;
+            display: inline-block;
+        }
+        .nav > li > a {
+            position: relative;
+            display: block;
+            color: #FFFFFF;
+            padding: 10px 15px;
+            background: transparent;
+            font-size: 21px;
+            text-decoration: none;
+        }
+        .nav > li > a:hover,
+        .nav > li > a:focus {
+            text-decoration: none;
+        }
+        .nav > li.disabled > a {
+            color: #999;
+        }
+        .nav > li.disabled > a:hover,
+        .nav > li.disabled > a:focus {
+            color: #999;
+            text-decoration: none;
+            background-color: transparent;
+            cursor: not-allowed;
+        }
+        .nav .open > a,
+        .nav .open > a:hover,
+        .nav .open > a:focus {
+            background-color: #eee;
+            border-color: #428bca;
+        }
+        .nav .nav-divider {
+            height: 1px;
+            margin: 9px 0;
+            overflow: hidden;
+            background-color: #e5e5e5;
+        }
+        .nav > li > a > img {
+            max-width: none;
+        }
+        .nav-tabs {
+            border-bottom: 1px solid #ddd;
+        }
+        .nav-tabs > li {
+            float: left;
+            margin-bottom: -1px;
+        }
+        .nav-tabs > li > a {
+            margin-right: 2px;
+            line-height: 1.42857;
+            border: 1px solid transparent;
+        }
+        .nav-tabs > li > a:hover {
+            border-color: #eee #eee #ddd;
+        }
+        .nav-tabs > li.active > a,
+        .nav-tabs > li.active > a:hover,
+        .nav-tabs > li.active > a:focus {
+            color: #555;
+            background-color: #f2f3f8;
+            border: 1px solid #ddd;
+            border-bottom-color: transparent;
+            cursor: default;
+        }
+        .nav-pills {
+            color: #ccc;
+        }
+        .nav-pills > li {
+            float: left;
+        }
+        .nav-pills > li + li {
+            margin-left: 2px;
+        }
+        .nav-pills > li.active > a,
+        .nav-pills > li.active > a:hover,
+        .nav-pills > li.active > a:focus {
+            background-color: #27272c;
+            color: #FFFFFF;
+        }
+        .nav-stacked > li {
+            float: none;
+        }
+        .nav-stacked > li + li {
+            margin-top: 2px;
+            margin-left: 0;
+        }
+        .nav-justified,
+        .nav-tabs.nav-justified {
+            width: 100%;
+        }
+        .nav-justified > li,
+        .nav-tabs.nav-justified > li {
+            float: none;
+        }
+        .nav-justified > li > a,
+        .nav-tabs.nav-justified > li > a {
+            text-align: center;
+            margin-bottom: 5px;
+        }
+        .nav-justified > .dropdown .dropdown-menu {
+            top: auto;
+            left: auto;
+        }
+        @media (min-width: 768px) {
+            .nav-justified > li,
+            .nav-tabs.nav-justified > li {
+            display: table-cell;
+            width: 1%;
+            }
+            .nav-justified > li > a,
+            .nav-tabs.nav-justified > li > a {
+            margin-bottom: 0;
+            }
+        }
+        .nav-tabs-justified,
+        .nav-tabs.nav-justified {
+            border-bottom: 0;
+        }
+        .nav-tabs-justified > li > a,
+        .nav-tabs.nav-justified > li > a {
+            margin-right: 0;
+        }
+        .nav-tabs-justified > .active > a,
+        .nav-tabs.nav-justified > .active > a,
+        .nav-tabs-justified > .active > a:hover,
+        .nav-tabs.nav-justified > .active > a:hover,
+        .nav-tabs-justified > .active > a:focus,
+        .nav-tabs.nav-justified > .active > a:focus {
+            border: 1px solid #ddd;
+        }
+        @media (min-width: 768px) {
+            .nav-tabs-justified > li > a,
+            .nav-tabs.nav-justified > li > a {
+            border-bottom: 1px solid #ddd;
+            }
+            .nav-tabs-justified > .active > a,
+            .nav-tabs.nav-justified > .active > a,
+            .nav-tabs-justified > .active > a:hover,
+            .nav-tabs.nav-justified > .active > a:hover,
+            .nav-tabs-justified > .active > a:focus,
+            .nav-tabs.nav-justified > .active > a:focus {
+            border-bottom-color: #f2f3f8;
+            }
+        }
         .lst-kix_9gd35fan5f03-7>li {
             counter-increment: lst-ctn-kix_9gd35fan5f03-7
         }
@@ -1118,7 +1295,6 @@
         }
 
         .c23 {
-            background-color: #ffffff;
             max-width: 468pt;
             padding: 72pt 72pt 72pt 72pt
         }
@@ -1299,14 +1475,23 @@
             text-align: left
         }
     </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="c23 doc-content">
+<body >
+    <nav>
+        <ul class="nav nav-pills nav-stacked">
+            <li><a href="../index.html"><i class="fa fa-home fa-fw"></i>&nbsp; Ethan Wintill</a></li>
+            <li><a href="../projects.html"><i class="fa fa-user fa-fw"></i>&nbsp; Projects</a></li>
+            <li><a href="../tutorials.html" class="active"><i class="fa fa-signal fa-fw"></i>&nbsp; Tutorials</a></li>
+            <li><a href="../index.html#contact"><i class="fa fa-envelope-o fa-fw"></i>&nbsp; Contact</a></li>
+        </ul>
+      </nav>
+    <div class="c23 doc-content">
+    
     <p class="c16 title" id="h.9aj0act0x1p5"><span class="c7 c24">How to Implement K-Means Clustering From Scratch In
             Jupyter Notebook</span></p>
-    <p class="c8"><span>Disclaimer: While no programming knowledge is necessary to follow this tutorial, it will be very
-            difficult to </span><span class="c26">understand </span><span class="c3">what&rsquo;s going on without a
-            basic understanding of python.</span></p>
+    <p class="c8"><span>Disclaimer: While no programming knowledge is necessary to follow this tutorial, it will be very difficult to </span><span class="c26">understand </span><span class="c3">what&rsquo;s going on without a basic understanding of python.</span></p>
     <p class="c8 c15"><span class="c3"></span></p>
     <p class="c8"><span class="c7 c13">Introduction</span></p>
     <p class="c8"><span class="c3">Given large unlabeled datasets, it can be useful to find &lsquo;clusters&rsquo; of
@@ -1765,6 +1950,7 @@
                 featurespace is 2D. The algorithm is likely still working, but sns can only graph 2 dimensional
                 featurespace. &nbsp;</span></li>
     </ul>
+</div>
 </body>
 
 </html>
