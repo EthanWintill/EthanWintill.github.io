@@ -20,6 +20,7 @@ html {
   summary {
     display: block;
   }
+  
   audio,
   canvas,
   progress,
@@ -37,7 +38,7 @@ html {
   }
   a {
     background: transparent;
-  }
+  }  
   a:active,
   a:hover {
     outline: 0;
@@ -63,6 +64,7 @@ html {
   small {
     font-size: 80%;
   }
+  
   sub,
   sup {
     font-size: 75%;
@@ -2723,6 +2725,7 @@ html {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
     margin: 0;
     word-wrap: break-word;
     list-style-position: outside;
@@ -2741,6 +2744,14 @@ html {
     list-style: none;
     flex: 47.5% 1;
     margin-right: 2.5%;
+    text-align: center;
+
+}
+
+.proj-list li img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* fit the image to the container */
 }
   .progress-bar-sql {
     background-color: #b0dff5;
